@@ -39,15 +39,19 @@ namespace ファイルを開いて何とかするやつ
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(21, 27);
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.CausesValidation = false;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 160);
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(484, 303);
             this.textBox1.TabIndex = 0;
             // 
             // たべる
             // 
-            this.たべる.Location = new System.Drawing.Point(156, 25);
+            this.たべる.Location = new System.Drawing.Point(12, 321);
             this.たべる.Name = "たべる";
             this.たべる.Size = new System.Drawing.Size(100, 23);
             this.たべる.TabIndex = 3;
@@ -57,7 +61,7 @@ namespace ファイルを開いて何とかするやつ
             // 
             // ふんばる
             // 
-            this.ふんばる.Location = new System.Drawing.Point(156, 64);
+            this.ふんばる.Location = new System.Drawing.Point(118, 321);
             this.ふんばる.Name = "ふんばる";
             this.ふんばる.Size = new System.Drawing.Size(100, 23);
             this.ふんばる.TabIndex = 3;
@@ -68,7 +72,8 @@ namespace ファイルを開いて何とかするやつ
             // ねる
             // 
             this.ねる.AutoSize = true;
-            this.ねる.Location = new System.Drawing.Point(156, 164);
+            this.ねる.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.ねる.Location = new System.Drawing.Point(396, 321);
             this.ねる.Name = "ねる";
             this.ねる.Size = new System.Drawing.Size(100, 23);
             this.ねる.TabIndex = 3;
@@ -87,10 +92,13 @@ namespace ファイルを開いて何とかするやつ
             // 
             // Form1
             // 
+            this.AcceptButton = this.たべる;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(274, 199);
+            this.CancelButton = this.ねる;
+            this.ClientSize = new System.Drawing.Size(508, 356);
+            this.ControlBox = false;
             this.Controls.Add(this.ねる);
             this.Controls.Add(this.ふんばる);
             this.Controls.Add(this.たべる);
