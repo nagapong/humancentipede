@@ -42,7 +42,7 @@ namespace ファイルを開いて何とかするやつ
             this.textBox1.Location = new System.Drawing.Point(21, 27);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(113, 138);
+            this.textBox1.Size = new System.Drawing.Size(112, 160);
             this.textBox1.TabIndex = 0;
             // 
             // たべる
@@ -53,6 +53,7 @@ namespace ファイルを開いて何とかするやつ
             this.たべる.TabIndex = 3;
             this.たべる.Text = "食べる";
             this.たべる.UseVisualStyleBackColor = true;
+            this.たべる.Click += new System.EventHandler(this.たべる_Click);
             // 
             // ふんばる
             // 
@@ -66,12 +67,14 @@ namespace ファイルを開いて何とかするやつ
             // 
             // ねる
             // 
-            this.ねる.Location = new System.Drawing.Point(156, 142);
+            this.ねる.AutoSize = true;
+            this.ねる.Location = new System.Drawing.Point(156, 164);
             this.ねる.Name = "ねる";
             this.ねる.Size = new System.Drawing.Size(100, 23);
             this.ねる.TabIndex = 3;
             this.ねる.Text = "寝る";
             this.ねる.UseVisualStyleBackColor = true;
+            this.ねる.Click += new System.EventHandler(this.ねる_Click);
             // 
             // exhaust
             // 
@@ -86,6 +89,7 @@ namespace ファイルを開いて何とかするやつ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(274, 199);
             this.Controls.Add(this.ねる);
             this.Controls.Add(this.ふんばる);

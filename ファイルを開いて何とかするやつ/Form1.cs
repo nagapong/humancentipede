@@ -24,17 +24,48 @@ namespace ファイルを開いて何とかするやつ
         {
             InitializeComponent();
         }
-        string strdata;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
         }
+        /*
 
+         */
         private void ふんばる_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(SaveFileDialog, false, Encoding.UTF8))
+            SaveFileDialog save = new SaveFileDialog();
+            save.FileName = "poop.csv";
+            save.InitialDirectory = @"./";
+            save.Title = "Go Toilet";
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(save.FileName, false, Encoding.UTF8))
+                {
+                    sw.Write(textBox1.Text);
+                }
+            }
 
+        }
+
+        private void ねる_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void たべる_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.DefaultExt = "csv";
+            open.InitialDirectory = @"./";
+            open.Title = "Have Some Food";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader sr = new StreamReader(open.FileName, Encoding.UTF8))
+                {
+                    textBox1.Text = sr.ReadToEnd();
+                }
+            }
         }
     }
 }
